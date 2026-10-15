@@ -27,70 +27,83 @@
       <button class="boton">Quiero adoptar</button>
     </section>
 
-    <!-- Sección sobre nosotros (Tarea 3) -->
+    <!-- Sección sobre nosotros -->
     <section id="nosotros" class="seccion">
       <h2>Sobre nosotros</h2>
-      <!-- Redacción de 4 líneas (misión) y dato curioso -->
-      <p>Somos un refugio sin fines de lucro dedicado a rescatar, cuidar y encontrar un hogar para perros y gatos abandonados.</p>
-      <p>Nuestra misión principal es brindar atención médica, rehabilitación y un entorno seguro a cada animal que llega a nuestras puertas.</p>
-      <p>Trabajamos incansablemente para concientizar a la comunidad sobre la tenencia responsable y reducir la tasa de abandono en la ciudad.</p>
-      <p><em>Dato curioso: ¡Desde nuestra fundación hemos logrado realojar exitosamente a más de 500 mascotas en hogares llenos de amor!</em></p>
-      
-      <!-- Lista de valores estilizada -->
+      <p>Somos un refugio sin fines de lucro dedicado a rescatar,
+      cuidar y encontrar un hogar para perros y gatos abandonados.</p>
       <ul class="valores">
-        <li><span>🐾</span> Responsabilidad</li>
-        <li><span>❤️</span> Cuidado</li>
-        <li><span>🌟</span> Amor</li>
+        <li>Responsabilidad</li>
+        <li>Cuidado</li>
+        <li>Amor</li>
       </ul>
     </section>
 
-    <!-- Sección adopta: tarjetas de mascotas (Tarea 4) -->
+    <!-- Sección adopta: tarjetas de mascotas -->
     <section id="adopta" class="seccion">
       <h2>Adóptame</h2>
       <div class="tarjetas">
         <article class="tarjeta">
           <img src="https://via.placeholder.com/200x150?text=Firulais" alt="Foto de Firulais">
           <h3>Firulais</h3>
-          <p>Perro, 2 años. Juguetón, vacunado y muy cariñoso con los niños.</p>
+          <p>Perro, 2 años. Juguetón y cariñoso.</p>
         </article>
         <article class="tarjeta">
           <img src="https://via.placeholder.com/200x150?text=Michi" alt="Foto de Michi">
           <h3>Michi</h3>
-          <p>Gato, 1 año. Tranquilo, esterilizado y le encanta dormir en el sofá.</p>
+          <p>Gato, 1 año. Tranquilo y dormilón.</p>
         </article>
         <article class="tarjeta">
           <img src="https://via.placeholder.com/200x150?text=Rocky" alt="Foto de Rocky">
           <h3>Rocky</h3>
-          <p>Conejo, 3 años. Muy curioso, amigable y le gusta comer zanahoria fresca.</p>
+          <p>Conejo, 3 años. Le gusta la zanahoria.</p>
         </article>
       </div>
     </section>
 
-    <!-- Sección visítanos -->
+    <!-- Sección visítanos (Tarea 5) -->
     <section id="visita" class="seccion">
       <h2>Visítanos</h2>
-      <p><strong>Dirección:</strong> Calle de los Animalitos #123, Ciudad.</p>
-      <p><strong>Horario:</strong> Lunes a sábado, 10:00 a 17:00 hrs.</p>
+      <div class="visita-contenedor">
+        <div class="visita-info">
+          <p>📍 <strong>Dirección:</strong> Calle de los Animalitos #123, Ciudad.</p>
+          <p>🕒 <strong>Horario:</strong> Lunes a sábado, 10:00 a 17:00 hrs.</p>
+          <!-- Botón de Cómo llegar -->
+          <a href="https://maps.google.com" target="_blank" class="boton-mapa">🚗 ¿Cómo llegar?</a>
+        </div>
+        <!-- Mapa de ejemplo (placeholder visual) -->
+        <div class="mapa-placeholder">
+          <p>Mapa de Ubicación (Refugio)</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Sección contacto -->
+    <!-- Sección contacto (Tarea 6) -->
     <section id="contacto" class="seccion">
       <h2>Contáctanos</h2>
       <form class="formulario">
         <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre">
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo">
+        
         <label for="correo">Correo</label>
-        <input type="email" id="correo" name="correo">
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+        
         <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje"></textarea>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje o duda aquí..."></textarea>
+        
         <button type="submit" class="boton">Enviar</button>
       </form>
     </section>
   </main>
 
+  <!-- Pie de página (Tarea 6: Redes sociales como enlaces) -->
   <footer class="pie">
     <p>© 2026 Adopta una Mascota — Proyecto escolar</p>
-    <p>Facebook | Instagram | X</p>
+    <div class="redes-sociales">
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">X</a>
+    </div>
   </footer>
 </body>
 </html>
