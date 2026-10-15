@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Encabezado: logo y menú de navegación -->
+  <!-- Tarea 1: Encabezado optimizado con ID para opción fija (sticky/fixed) y clase 'activo' en el primer enlace -->
   <header class="encabezado">
     <h1 class="logo">🐾 Adopta una Mascota</h1>
     <nav class="menu">
-      <a href="#inicio">Inicio</a>
+      <a href="#inicio" class="activo">Inicio</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#adopta">Adóptame</a>
       <a href="#visita">Visítanos</a>
@@ -20,11 +20,13 @@
   </header>
 
   <main>
-    <!-- Sección principal (hero) -->
+    <!-- Tarea 2: Sección principal (hero) con elementos enriquecidos (subtítulo/eslogan) -->
     <section id="inicio" class="hero">
-      <h2>Dales una segunda oportunidad</h2>
-      <p>Encuentra a tu nuevo mejor amigo en nuestro refugio.</p>
-      <button class="boton">Quiero adoptar</button>
+      <div class="hero-contenido">
+        <h2>Dales una segunda oportunidad</h2>
+        <p class="eslogan">Encuentra a tu nuevo mejor amigo en nuestro refugio y cambia una vida hoy.</p>
+        <button class="boton">Quiero adoptar</button>
+      </div>
     </section>
 
     <!-- Sección sobre nosotros -->

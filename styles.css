@@ -12,7 +12,9 @@ body {
   line-height: 1.6;
 }
 
-/* Encabezado */
+/* ==========================================================================
+   Tarea 1: Encabezado y Menú de Navegación (feature/head/hero)
+   ========================================================================== */
 .encabezado {
   background-color: #4caf50;
   color: white;
@@ -20,30 +22,96 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* Opcional Tarea 1: Permite que el encabezado se mantenga visible al hacer scroll */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Tarea 1: Mejor diseño para el logo */
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Tarea 1: Estilizado del menú e interacciones hover y activo */
 .menu a {
   color: white;
   text-decoration: none;
-  margin-left: 1rem;
+  margin-left: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 0.2rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-/* Hero */
+/* Tarea 1: Cambio de color al pasar el cursor (hover) */
+.menu a:hover {
+  color: #c8e6c9;
+  border-bottom: 2px solid #c8e6c9;
+}
+
+/* Tarea 1: Subrayado y estilo del enlace de la sección actual */
+.menu a.activo {
+  border-bottom: 2px solid #ffffff;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Tarea 2: Sección Principal / Hero (feature/head/hero)
+   ========================================================================== */
 .hero {
-  background-color: #e8f5e9;
+  /* Tarea 2: Fondo con degradado verde suave y elegante */
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.hero-contenido {
+  max-width: 700px;
+}
+
+/* Tarea 2: Título más grande y llamativo */
+.hero h2 {
+  font-size: 2.2rem;
+  color: #1b5e20;
+  margin-bottom: 0.8rem;
+}
+
+/* Tarea 2: Eslogan del refugio */
+.hero .eslogan {
+  font-size: 1.1rem;
+  color: #2e7d32;
+  margin-bottom: 1.5rem;
+}
+
+/* Tarea 2: Botón con esquinas redondeadas, sombra y efecto hover */
 .boton {
   background-color: #2e7d32;
   color: white;
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px; /* Esquinas redondeadas */
   cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-/* Secciones */
+/* Tarea 2: Efecto hover para el botón */
+.boton:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px); /* Ligero levante al pasar el cursor */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Secciones generales */
 .seccion {
   padding: 2rem;
   max-width: 900px;
