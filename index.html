@@ -63,31 +63,49 @@
       </div>
     </section>
 
-    <!-- Sección visítanos -->
+    <!-- Sección visítanos (Tarea 5) -->
     <section id="visita" class="seccion">
       <h2>Visítanos</h2>
-      <p><strong>Dirección:</strong> Calle de los Animalitos #123, Ciudad.</p>
-      <p><strong>Horario:</strong> Lunes a sábado, 10:00 a 17:00 hrs.</p>
+      <div class="visita-contenedor">
+        <div class="visita-info">
+          <p>📍 <strong>Dirección:</strong> Calle de los Animalitos #123, Ciudad.</p>
+          <p>🕒 <strong>Horario:</strong> Lunes a sábado, 10:00 a 17:00 hrs.</p>
+          <!-- Botón de Cómo llegar -->
+          <a href="https://maps.google.com" target="_blank" class="boton-mapa">🚗 ¿Cómo llegar?</a>
+        </div>
+        <!-- Mapa de ejemplo (placeholder visual) -->
+        <div class="mapa-placeholder">
+          <p>Mapa de Ubicación (Refugio)</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Sección contacto -->
+    <!-- Sección contacto (Tarea 6) -->
     <section id="contacto" class="seccion">
       <h2>Contáctanos</h2>
       <form class="formulario">
         <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre">
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo">
+        
         <label for="correo">Correo</label>
-        <input type="email" id="correo" name="correo">
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+        
         <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje"></textarea>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje o duda aquí..."></textarea>
+        
         <button type="submit" class="boton">Enviar</button>
       </form>
     </section>
   </main>
 
+  <!-- Pie de página (Tarea 6: Redes sociales como enlaces) -->
   <footer class="pie">
     <p>© 2026 Adopta una Mascota — Proyecto escolar</p>
-    <p>Facebook | Instagram | X</p>
+    <div class="redes-sociales">
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">X</a>
+    </div>
   </footer>
 </body>
 </html>
