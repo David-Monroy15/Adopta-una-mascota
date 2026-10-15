@@ -12,7 +12,9 @@ body {
   line-height: 1.6;
 }
 
-/* Encabezado */
+/* ==========================================================================
+   Tarea 1: Encabezado y Menú de Navegación
+   ========================================================================== */
 .encabezado {
   background-color: #4caf50;
   color: white;
@@ -20,30 +22,67 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .menu a {
   color: white;
   text-decoration: none;
-  margin-left: 1rem;
+  margin-left: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 0.2rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-/* Hero */
+.menu a:hover {
+  color: #c8e6c9;
+  border-bottom: 2px solid #c8e6c9;
+}
+
+.menu a.activo {
+  border-bottom: 2px solid #ffffff;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Tarea 2: Sección Principal / Hero
+   ========================================================================== */
 .hero {
-  background-color: #e8f5e9;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.boton {
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  cursor: pointer;
+.hero-contenido {
+  max-width: 700px;
 }
 
-/* Secciones */
+.hero h2 {
+  font-size: 2.2rem;
+  color: #1b5e20;
+  margin-bottom: 0.8rem;
+}
+
+.hero .eslogan {
+  font-size: 1.1rem;
+  color: #2e7d32;
+  margin-bottom: 1.5rem;
+}
+
+/* Secciones generales */
 .seccion {
   padding: 2rem;
   max-width: 900px;
@@ -55,37 +94,212 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Tarjetas de mascotas */
+/* ==========================================================================
+   Tarea 3: Lista de valores de la sección Sobre nosotros
+   ========================================================================== */
+.valores {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.valores li {
+  background-color: #e8f5e9;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #2e7d32;
+  font-weight: bold;
+  border: 1px solid #c8e6c9;
+}
+
+/* ==========================================================================
+   Tarea 4: Tarjetas de mascotas
+   ========================================================================== */
 .tarjetas {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tarjeta {
-  border: 1px solid #ccc;
+  border: 1px solid #e0e0e0;
   background: white;
   padding: 1rem;
-  width: 200px;
+  width: 260px;
   text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Formulario */
+.tarjeta img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   Tarea 5: Sección Visítanos
+   ========================================================================== */
+.visita-contenedor {
+  background-color: #f1f8e9;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.visita-info p {
+  margin-bottom: 0.5rem;
+}
+
+.boton-mapa {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background-color: #388e3c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.boton-mapa:hover {
+  background-color: #2e7d32;
+}
+
+.mapa-placeholder {
+  background-color: #dcedc8;
+  border: 2px dashed #aed581;
+  border-radius: 6px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #558b2f;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Tarea 6: Formulario y Pie de página
+   ========================================================================== */
 .formulario label {
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
+  font-weight: bold;
+  color: #2e7d32;
 }
 
 .formulario input,
 .formulario textarea {
   width: 100%;
-  padding: 0.4rem;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 0.3rem;
+  font-size: 1rem;
 }
 
-/* Pie de página */
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.boton {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.formulario .boton {
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+
 .pie {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
+}
+
+.redes-sociales {
+  margin-top: 0.5rem;
+}
+
+.redes-sociales a {
+  color: #81c784;
+  text-decoration: none;
+  margin: 0 0.3rem;
+  font-weight: bold;
+}
+
+.redes-sociales a:hover {
+  text-decoration: underline;
+  color: #a5d6a7;
+}
+
+/* ==========================================================================
+   Tarea 7: Diseño responsivo (Pantallas menores a 600px)
+   ========================================================================== */
+@media screen and (max-width: 600px) {
+  .encabezado {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .menu a {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .seccion {
+    padding: 1.5rem 1rem;
+  }
 }
